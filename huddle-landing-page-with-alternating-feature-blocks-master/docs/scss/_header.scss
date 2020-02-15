@@ -1,0 +1,40 @@
+header {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: calc(80px + 1vh);
+    padding: 5vw;
+
+    @media screen and (min-width: $large) {
+        max-height: 15vh;
+        margin-bottom: 10vh;
+    }
+
+    #header-logo {
+        height: 20px;
+        width: auto;
+        float: right;
+
+        @media screen and (min-width: $large) {
+            max-width: 12vw;
+            max-height: 4vh;
+        }
+    }
+
+    .header-btn {
+        background-color: white;
+        color: black;
+        text-transform: capitalize;
+
+        padding: 0.5em 2em;
+        border-radius: 15px;
+        box-shadow: 0 3px 10px hsla(208, 11%, 55%, 25%);
+
+        @media screen and (min-width: $large) {
+            padding: 0.8em 3em;
+            border-radius: 1.5em;
+            box-shadow: 0 3px 10px hsla(208, 11%, 55%, 25%);
+        }
+    }
+}

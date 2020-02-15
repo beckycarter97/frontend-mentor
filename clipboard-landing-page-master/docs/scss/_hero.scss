@@ -1,0 +1,23 @@
+.hero {
+    padding-top: 120px;
+    background-image: url(../images/bg-header-mobile.png);
+    background-size: cover;
+    background-position: center top;
+
+    @include breakpoint(medium) {
+        background-image: url(../images/bg-header-desktop.png);
+        padding-top: 130px;
+    }
+
+    &__logo {
+        margin-bottom: 70px;
+    }
+
+    h1 {
+        @include breakpoint(large) {
+            br {
+                display: none;
+            }
+        }
+    }
+}

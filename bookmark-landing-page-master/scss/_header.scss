@@ -1,0 +1,88 @@
+header {
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+
+  .logo {
+    width: 150px;
+  }
+
+
+  @include breakpointMin(medium) {
+    .nav-button {
+      width: 20px;
+      background-image: url(./../images/icon-hamburger.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    nav {
+
+      display: none;
+
+      .logo {}
+
+      ul {
+
+        li {}
+      }
+    }
+
+
+  }
+
+  @include breakpoint(medium) {
+    padding-top: 50px;
+    align-items: center;
+
+    .nav-button {
+      display: none;
+    }
+
+    .nav {
+      .logo {
+        display: none;
+      }
+
+      &-links {
+        display: flex;
+        list-style-type: none;
+
+        &-link {
+          text-align: center;
+          text-transform: uppercase;
+          height: 45px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          cursor: pointer;
+
+          &:hover {
+            color: $soft-red;
+          }
+
+          &:not(:last-child) {
+            margin-right: 40px;
+          }
+
+          &.login {
+            background-color: $soft-red;
+            border: $soft-red solid 2px;
+            color: white;
+            width: 110px;
+            border-radius: 5px;
+            box-shadow: hsla(229, 8%, 60%, 0.486) 0px 5px 5px;
+
+            &:hover {
+              background-color: white;
+              color: $soft-red;
+            }
+          }
+        }
+
+      }
+
+    }
+  }
+}

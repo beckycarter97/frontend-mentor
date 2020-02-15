@@ -1,0 +1,53 @@
+.features {
+    margin-bottom: 150px;
+
+    @include breakpoint(medium) {
+        margin-bottom: 130px;
+    }
+
+    &__grid {
+        @include breakpoint(medium) {
+            max-width: 880px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-column-gap: 50px;
+            grid-row-gap: 50px;
+        }
+
+        @include breakpoint(large) {
+            grid-column-gap: 140px;
+            grid-row-gap: 90px;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 85px;
+        }
+
+        img {
+            margin-bottom: 35px;
+        }
+
+        @include breakpoint(medium) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 325px;
+
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
+
+            img {
+                margin-bottom: 25px;
+            }
+        }
+
+        @include breakpoint(large) {
+            max-width: none;
+        }
+    }
+}

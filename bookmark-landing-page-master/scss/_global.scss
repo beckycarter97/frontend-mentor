@@ -1,0 +1,45 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: $body-font;
+  font-size: $body-font-size;
+  font-weight: 400;
+}
+
+
+.full-width {
+
+  margin-left: 32px;
+  margin-right: 32px;
+
+  @include breakpoint(medium) {
+    margin-left: 165px;
+    margin-right: 165px;
+  }
+}

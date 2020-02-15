@@ -1,0 +1,40 @@
+//Colours
+
+// Primary
+$soft-blue: hsl(231, 69%, 60%);
+$soft-red: hsl(0, 94%, 66%);
+
+// Neutral
+$gray-blue: hsl(229, 8%, 60%);
+$v-dark-blue: hsl(229, 32%, 21%);
+
+
+// Typography
+
+// Body
+$body-font: 'Rubik',
+sans-serif;
+$body-font-size: 18px;
+
+// Breakpoints
+
+$breakpoints: (small: 699px,
+  medium: 700px,
+  large: 1100px,
+  xlarge: 1300px);
+
+@mixin breakpoint($size) {
+  $breakpoint-value: map-get($breakpoints, $size);
+
+  @media screen and (min-width: $breakpoint-value) {
+    @content;
+  }
+}
+
+@mixin breakpointMin($size) {
+  $breakpoint-value: map-get($breakpoints, $size);
+
+  @media screen and (max-width: $breakpoint-value) {
+    @content;
+  }
+}

@@ -1,0 +1,58 @@
+header {
+    background-color: $introEmail;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 20px 50px;
+
+    @include breakpoint(medium) {
+        padding: 75px 80px;
+    }
+
+    @include breakpoint(xlarge) {
+        padding: 75px 150px;
+    }
+
+    .logo {
+        img {
+            height: 25px;
+
+            @include breakpoint(medium) {
+                height: 50px;
+            }
+        }
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+
+        a {
+            color: $neutral;
+            text-decoration: none;
+            display: inline-block;
+
+            &::after {
+                content: "";
+                display: block;
+                height: 1px;
+                width: 0;
+                background: transparent;
+                transition: all 0.5s ease;
+                margin-top: 0.25rem;
+            }
+            &:hover::after {
+                width: 100%;
+                background: $neutral;
+            }
+
+            &:not(:last-child) {
+                padding-right: 1.5rem;
+
+                @include breakpoint(medium) {
+                    margin-right: 3.5rem;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}

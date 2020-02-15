@@ -1,0 +1,129 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+::before,
+::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.full-width {
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+@media screen and (min-width: 700px) {
+  .full-width {
+    margin-left: 165px;
+    margin-right: 165px;
+  }
+}
+
+header {
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .logo {
+  width: 150px;
+}
+
+@media screen and (max-width: 700px) {
+  header .nav-button {
+    width: 20px;
+    background-image: url(./../images/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  header nav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  header {
+    padding-top: 50px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .nav-button {
+    display: none;
+  }
+  header .nav .logo {
+    display: none;
+  }
+  header .nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style-type: none;
+  }
+  header .nav-links-link {
+    text-align: center;
+    text-transform: uppercase;
+    height: 45px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    cursor: pointer;
+  }
+  header .nav-links-link:hover {
+    color: #fa5757;
+  }
+  header .nav-links-link:not(:last-child) {
+    margin-right: 40px;
+  }
+  header .nav-links-link.login {
+    background-color: #fa5757;
+    border: #fa5757 solid 2px;
+    color: white;
+    width: 110px;
+    border-radius: 5px;
+    -webkit-box-shadow: rgba(145, 148, 161, 0.486) 0px 5px 5px;
+            box-shadow: rgba(145, 148, 161, 0.486) 0px 5px 5px;
+  }
+  header .nav-links-link.login:hover {
+    background-color: white;
+    color: #fa5757;
+  }
+}
+/*# sourceMappingURL=style.css.map */

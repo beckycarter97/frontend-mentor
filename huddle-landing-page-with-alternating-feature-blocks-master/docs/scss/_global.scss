@@ -1,0 +1,104 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    font-size: 1.125rem;
+    font-family: $bodyFont;
+    font-weight: 400;
+
+    background: url(../images/bg-hero-mobile.svg) no-repeat,
+        linear-gradient(
+            to bottom,
+            $neutralPaleCyan 0%,
+            $neutralPaleCyan 150vh,
+            white calc(150vh + 1px),
+            white 100%
+        );
+    background-size: contain;
+
+    @media screen and (min-width: $medium) {
+        background: url(../images/bg-hero-desktop.svg) no-repeat,
+            linear-gradient(
+                to bottom,
+                $neutralPaleCyan 0%,
+                $neutralPaleCyan 200vh,
+                white calc(200vh + 1px),
+                white 100%
+            );
+        background-size: contain;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $headingFont;
+    font-weight: 600;
+    margin: 0;
+}
+
+h1 {
+    margin-bottom: 35px;
+
+    @media screen and (min-width: $medium) {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    @media screen and (min-width: $large) {
+        margin-bottom: 50px;
+        max-width: calc(400px + 5vw);
+        font-size: 2.25rem;
+    }
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 35px;
+    line-height: 1.5;
+}
+
+p.medium {
+    font-size: 1rem;
+}
+
+section {
+    width: 100vw;
+}
+
+button {
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+
+    @media screen and (min-width: $medium) {
+        border-radius: 40px;
+        padding: 20px 50px;
+    }
+
+    &.free-start-btn {
+        background-color: $primaryColor;
+        color: white;
+
+        padding: 1.2em 3.5em;
+        border-radius: 5em;
+
+        max-width: 350px;
+    }
+}

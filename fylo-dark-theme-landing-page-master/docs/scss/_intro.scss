@@ -1,0 +1,79 @@
+.intro {
+    background: url("../images/bg-curvy-mobile.svg") no-repeat,
+        linear-gradient(
+            to bottom,
+            $introEmail 0%,
+            $introEmail calc(100% - 220px),
+            $mainBG calc(100% - 219px),
+            $mainBG 100%
+        );
+    background-position: center bottom 220px, bottom center;
+    background-size: contain;
+    padding-bottom: 130px;
+
+    @include breakpoint(medium) {
+        background: url("../images/bg-curvy-desktop.svg") no-repeat, $introEmail;
+        background-position: center bottom;
+        background-size: contain;
+        padding-bottom: 150px;
+    }
+
+    @include breakpoint(large) {
+        padding-bottom: 165px;
+    }
+
+    &__image {
+        margin-bottom: 40px;
+        @include breakpoint(medium) {
+            margin-bottom: 55px;
+        }
+        img {
+            width: 300px;
+            @include breakpoint(medium) {
+                width: 540px;
+            }
+            @include breakpoint(large) {
+                width: 720px;
+            }
+        }
+    }
+
+    .content {
+        max-width: none;
+        padding-left: 35px;
+        padding-right: 35px;
+
+        h1,
+        p {
+            max-width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+
+            @include breakpoint(medium) {
+                max-width: none;
+            }
+        }
+
+        p {
+            padding: 0 5px;
+        }
+
+        br {
+            display: none;
+        }
+
+        @include breakpoint(medium) {
+            width: 600px;
+            p {
+                padding: 0;
+            }
+        }
+
+        @include breakpoint(large) {
+            width: calc(680px + 5vw);
+            br {
+                display: inline-block;
+            }
+        }
+    }
+}

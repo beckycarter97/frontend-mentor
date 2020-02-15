@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins&display=swap"
+            rel="stylesheet"
+        />
+        <link href="./scss/style.css" type="text/css" rel="stylesheet" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+
+        <title>
+            Frontend Mentor | Huddle landing page with alternating feature
+            blocks
+        </title>
+    </head>
+    <body>
+        <header>
+            <img
+                class="logo"
+                id="header-logo"
+                src="./images/logo.svg"
+                alt="huddle logo"
+            />
+            <button class="header-btn" id="try-it-btn">
+                Try It Free
+            </button>
+        </header>
+        <section class="intro-section">
+            <div class="text-content">
+                <h1>Build The Community Your Fans Will Love</h1>
+                <p>
+                    Huddle re-imagines the way we build communities. You have a
+                    voice, but so does your audience. Create connections with
+                    your users as you engage in genuine discussion.
+                </p>
+                <button class="btn free-start-btn">
+                    Get Started For Free
+                </button>
+            </div>
+            <img src="images/illustration-mockups.svg" id="landing-img" />
+        </section>
+        <section class="features-section">
+            <div class="feature-panel">
+                <h2 class="feature-heading">Grow Together</h2>
+                <p class="feature-description medium">
+                    Generate meaningful discussions with your audience and build
+                    a strong, loyal community. Think of the insightful
+                    conversations you miss out on with a feedback form.
+                </p>
+                <div class="feature-img odd-feature-img">
+                    <img
+                        id="grow-img"
+                        src="./images/illustration-grow-together.svg"
+                    />
+                </div>
+            </div>
+            <div class="feature-panel">
+                <h2 class="feature-heading">
+                    Flowing Conversations
+                </h2>
+                <p class="feature-description medium">
+                    You wouldn't paginate a conversation in real life, so why do
+                    it online? Our threads have just-in-time loading for a more
+                    natural flow.
+                </p>
+                <div class="feature-img even-feature-img">
+                    <img
+                        id="flow-img"
+                        src="./images/illustration-flowing-conversation.svg"
+                    />
+                </div>
+            </div>
+            <div class="feature-panel">
+                <h2 class="feature-heading">
+                    Your Users
+                </h2>
+                <p class="feature-description medium">
+                    It takes no time at all to integrate Huddle with your app's
+                    authentication solution. This means, once signed in to your
+                    app, your users can start chatting immediately.
+                </p>
+                <div class="feature-img odd-feature-img">
+                    <img
+                        id="user-img"
+                        src="images/illustration-your-users.svg"
+                    />
+                </div>
+            </div>
+        </section>
+        <section class="build-community">
+            <h2>Ready To Build Your Community?</h2>
+            <button class="btn free-start-btn">
+                Get Started For Free
+            </button>
+        </section>
+
+        <section class="info-bar">
+            <img
+                class="logo"
+                id="footer-logo"
+                src="images/logo-white.svg"
+                alt=""
+            />
+
+            <div class="contact-details">
+                <div class="contact">
+                    <img class="icon" src="images/icon-location.svg" />
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua
+                    </p>
+                </div>
+                <div class="contact">
+                    <img class="icon" src="./images/icon-phone.svg" />
+                    <p>+1-543-123-4567</p>
+                </div>
+                <div class="contact">
+                    <img class="icon" src="./images/icon-email.svg" />
+                    <p>
+                        <a href="mailto:example@huddle.com">
+                            example@huddle.com</a
+                        >
+                    </p>
+                </div>
+            </div>
+            <div class="info-bar-links">
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">What We Do</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="social-container">
+                <div class="social">
+                    <svg
+                        class="social-logo"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                    >
+                        <title>facebook</title>
+                        <path
+                            d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z"
+                        ></path>
+                    </svg>
+                </div>
+                <div class="social">
+                    <svg
+                        class="social-logo"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                    >
+                        <path
+                            d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6-18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6.8 15 2.5 22.1-80.5-4-151.9-42.6-199.6-101.3-8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7-16-.4-31-4.8-44-12.1v1.2c0 47 33.4 86.1 77.7 95-8.1 2.2-16.7 3.4-25.5 3.4-6.2 0-12.3-.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3-33.1 26-74.9 41.5-120.3 41.5-7.8 0-15.5-.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-.1-8.4-.3-12.5C462.6 146 479 129 492 109.5z"
+                        />
+                    </svg>
+                </div>
+                <div class="social">
+                    <svg
+                        class="social-logo"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                    >
+                        <path
+                            d="M336 96c21.2 0 41.3 8.4 56.5 23.5S416 154.8 416 176v160c0 21.2-8.4 41.3-23.5 56.5S357.2 416 336 416H176c-21.2 0-41.3-8.4-56.5-23.5S96 357.2 96 336V176c0-21.2 8.4-41.3 23.5-56.5S154.8 96 176 96h160m0-32H176c-61.6 0-112 50.4-112 112v160c0 61.6 50.4 112 112 112h160c61.6 0 112-50.4 112-112V176c0-61.6-50.4-112-112-112z"
+                        />
+                        <path
+                            d="M360 176c-13.3 0-24-10.7-24-24s10.7-24 24-24c13.2 0 24 10.7 24 24s-10.8 24-24 24zM256 192c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64m0-32c-53 0-96 43-96 96s43 96 96 96 96-43 96-96-43-96-96-96z"
+                        />
+                    </svg>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; Copyright 2018 Huddle. All rights reserved.
+            </div>
+            <p class="attribution">
+                Challenge by
+                <a
+                    href="https://www.frontendmentor.io?ref=challenge"
+                    target="_blank"
+                    >Frontend Mentor</a
+                >. Coded by
+                <a href="https://www.instagram.com/girlmeetcode">girlmeetcode</a
+                >.
+            </p>
+        </section>
+    </body>
+</html>

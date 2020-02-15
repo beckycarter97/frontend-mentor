@@ -1,0 +1,102 @@
+footer {
+    background-color: $xLightGray;
+    padding: 46px 0;
+
+    .footer-container {
+        text-align: center;
+
+        @include breakpoint(medium) {
+            display: flex;
+            justify-content: space-between;
+            text-align: left;
+        }
+    }
+
+    .logo {
+        margin-bottom: 45px;
+
+        @include breakpoint(medium) {
+            margin-bottom: 0;
+        }
+        img {
+            width: 60px;
+        }
+    }
+
+    .links {
+        @include breakpoint(medium) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 3vw;
+            grid-row-gap: 25px;
+        }
+        @include breakpoint(large) {
+            grid-column-gap: 7vw;
+            grid-row-gap: 25px;
+        }
+        a {
+            display: block;
+            color: $darkGray;
+            text-decoration: none;
+            margin-bottom: 30px;
+
+            @include breakpoint(medium) {
+                margin-bottom: 0;
+            }
+
+            &:hover {
+                color: $cyan;
+            }
+
+            &:nth-child(even) {
+                grid-row: 2/3;
+            }
+
+            &:last-child {
+                margin-bottom: 55px;
+
+                @include breakpoint(medium) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+
+            &:not(:last-child) {
+                margin-right: 25px;
+            }
+        }
+        a.facebook {
+            background-image: url("../images/icon-facebook.svg");
+            &:hover {
+                background-image: url("../images/icon-facebook-cyan.svg");
+            }
+        }
+        a.twitter {
+            background-image: url("../images/icon-twitter.svg");
+            &:hover {
+                background-image: url("../images/icon-twitter-cyan.svg");
+            }
+        }
+        a.instagram {
+            background-image: url("../images/icon-instagram.svg");
+            &:hover {
+                background-image: url("../images/icon-instagram-cyan.svg");
+            }
+        }
+    }
+}

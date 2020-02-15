@@ -1,0 +1,44 @@
+// Fonts
+$headingFont: "Raleway", sans-serif;
+$bodyFont: "Open Sans", sans-serif;
+
+$strong: 700;
+$normal: 400;
+
+// Colours
+// -- primary
+$introEmail: hsl(217, 28%, 15%);
+$mainBG: hsl(218, 28%, 13%);
+$footerBG: hsl(216, 53%, 9%);
+$testimonialBG: hsl(219, 30%, 18%);
+
+// -- accent
+$ctaCyan: hsl(176, 68%, 64%);
+$ctaBlue: hsl(198, 60%, 50%);
+
+// -- neutral
+$neutral: hsl(0, 0%, 100%);
+
+// Media Queries
+$breakpoints: (
+    small: 699px,
+    medium: 700px,
+    large: 1000px,
+    xlarge: 1300px
+);
+
+@mixin breakpoint($size) {
+    $breakpoint-value: map-get($breakpoints, $size);
+
+    @media screen and (min-width: $breakpoint-value) {
+        @content;
+    }
+}
+
+@mixin breakpoint-less($size) {
+    $breakpoint-value: map-get($breakpoints, $size);
+
+    @media screen and (max-width: $breakpoint-value) {
+        @content;
+    }
+}

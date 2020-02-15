@@ -1,0 +1,92 @@
+.features-section {
+    background-color: white;
+    text-align: center;
+
+    padding: 60px 6vw 0;
+
+    @media screen and (min-width: $large) {
+        padding: 5em 0 0;
+    }
+
+    .feature-panel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+
+        width: 100%;
+        margin-bottom: 40px;
+        padding: 3em 0 2em;
+
+        border-radius: 1em;
+        box-shadow: 0 3px 10px hsla(208, 11%, 55%, 25%);
+
+        @media screen and (min-width: $large) {
+            width: 85vw;
+            max-width: 1200px;
+            margin: 2em auto;
+            padding: 0 40px 0 calc(50px + 5vw);
+
+            border-radius: 1em;
+            box-shadow: 0 3px 10px hsla(208, 11%, 55%, 25%);
+
+            text-align: left;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-column-gap: calc(10px + 5vw);
+            grid-row-gap: 20px;
+        }
+
+        .feature-img {
+            width: 60vw;
+            margin-bottom: 60px;
+
+            grid-row: 1/3;
+
+            img {
+                max-width: 100%;
+            }
+
+            @media screen and (min-width: $medium) {
+                width: 45vw;
+            }
+
+            @media screen and (min-width: $large) {
+                width: 25vw;
+                margin-bottom: 0;
+                padding: 55px 0;
+                max-width: 450px;
+
+                &.odd-feature-img {
+                    grid-column: 2/3;
+                }
+                &.even-feature-img {
+                    grid-column: 1/2;
+                }
+            }
+        }
+
+        h2 {
+            width: 80%;
+            margin-bottom: 20px;
+
+            @media screen and (min-width: $large) {
+                align-self: end;
+                margin-bottom: 0;
+            }
+        }
+
+        p {
+            width: 80%;
+            color: $neutralGrayBlue;
+
+            @media screen and (min-width: $large) {
+                width: auto;
+                align-self: start;
+                max-width: 500px;
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+.productive {
+    margin-bottom: 150px;
+
+    @include breakpoint(medium) {
+        margin-bottom: 140px;
+    }
+
+    .content {
+        margin: auto;
+
+        @include breakpoint(medium) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__image {
+        text-align: center;
+        img {
+            width: 300px;
+        }
+        margin-bottom: 50px;
+
+        @include breakpoint(medium) {
+            flex: 1;
+            text-align: right;
+            margin-bottom: 0;
+            img {
+                width: auto;
+                max-width: 100%;
+            }
+        }
+    }
+
+    &__text {
+        a {
+            cursor: pointer;
+            color: $ctaCyan;
+            padding-bottom: 0.5rem;
+            transition: border-bottom 0.5s ease;
+            border-bottom: 1px solid $mainBG;
+            display: inline-block;
+
+            &::after {
+                content: "";
+                display: block;
+                height: 1px;
+                width: 0;
+                background: transparent;
+                transition: all 0.5s ease;
+                margin-top: 0.5rem;
+            }
+            &:hover::after {
+                width: 100%;
+                background: $ctaCyan;
+            }
+        }
+        img {
+            vertical-align: bottom;
+        }
+
+        @include breakpoint(medium) {
+            flex: 1;
+            padding-left: 55px;
+
+            h2 {
+                max-width: 335px;
+            }
+            p {
+                max-width: 550px;
+            }
+        }
+    }
+}
